@@ -72,7 +72,7 @@ function runUnitTests() {
     testar("UNIT - Senha do usuário", () => {
         const produtos = cadastroDeUsuario()
         if (!usuario.senha || usuario.senha,length < 6 || typeof usuario.senha !== "number"){
-            throw new Error("Usuários devem ter um email válido.");
+            throw new Error("Usuários devem ter uma senha válida.");
         }
     })
 
