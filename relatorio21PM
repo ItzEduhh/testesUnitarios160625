@@ -1,5 +1,0 @@
-Na função de testes unitários, foi feito: Uma função para testar os códigos; Funções e testes
-para válidar número e existência de barracas e produtos de cada barraca, assim como ingressos
-que algumas barracas podem vender; Funções e testes para validar a existênca de nomes e preços 
-nos produtos, assim como a validação para email e senha mínima de 6 digitos numéricos; Funções
-e testes para validar se as barracas possuem um dono.
