@@ -24,6 +24,10 @@ function runUnitTests() {
 
     }
 
+    function validarPlaca(placa) {
+    return /^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/.test(placa);
+    }
+
     function cadastroVeiculo(cadastroVeiculo) {
         return {
             modelo: "Impala 77",
@@ -31,7 +35,6 @@ function runUnitTests() {
             placa: "LLLNLNN"
         }
     }
-
 
    
     testar("UNIT - Cadastro do expositor", () => {
@@ -67,7 +70,11 @@ function runUnitTests() {
     testar("UNIT - Cadastro do veículo", () => {
         const veiculo = cadastroVeiculo()
         if (!veiculo || !veiculo.modelo || !veiculo.cor || !veiculo.placa ) 
-        throw new Error("Não existe um veículo para estacionar");
+        throw new Error("Não existe um veículo para estacionar")
+    
+        if (!validarPlaca(veiculo.placa)) {
+        throw new Error("Placa do veículo não validada");
+        }
     })
 
 }
